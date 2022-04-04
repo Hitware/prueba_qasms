@@ -30,3 +30,18 @@ function listarDatos() {
     });
     
 }
+
+function listarDatosTest() {
+    $.ajax({
+        url: 'https://jsonplaceholder.typicode.com/posts',
+        type: 'GET',
+        success: function(e) {
+            $("#resultado").html("Correcto");    
+        },error:function(){
+            $("#resultado").html("Error inesperado");    
+
+        }
+    });
+    
+}
+
